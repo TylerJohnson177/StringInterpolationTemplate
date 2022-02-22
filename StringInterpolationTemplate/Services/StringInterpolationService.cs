@@ -53,7 +53,7 @@ public class StringInterpolationService : IStringInterpolationService
     public string Number06()
     {
         var date = _date.Now;
-        return $"{date:t} PM".PadRight(10) + $"{date.ToString("dddd")}".PadRight(11);
+        return $"{date:t} PM".PadRight(10) + $"{date.ToString("dddd")}".PadRight(10);
     }
 
     public string Number07()
