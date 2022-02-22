@@ -14,7 +14,7 @@ public class StringInterpolationServiceTests
     public StringInterpolationServiceTests()
     {
         Mock<ISystemDate> mockDate = new();
-        DateTime testDate = new(2019, 01, 22, 23, 01, 27);
+        DateTime testDate = new(2019, 01, 22, 11, 01, 27);
 
         mockDate.Setup(x => x.Now).Returns(testDate);
         _service = new StringInterpolationService(mockDate.Object, NullLogger<IStringInterpolationService>.Instance);
