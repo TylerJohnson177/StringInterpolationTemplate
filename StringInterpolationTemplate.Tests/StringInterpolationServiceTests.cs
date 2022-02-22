@@ -110,4 +110,13 @@ public class StringInterpolationServiceTests
         Assert.Equal("     3.142", response);
     }
     
+    [Fact]
+    public void StringInterpolationService_Number11_Success()
+    {
+        var pi = Math.PI;
+        var response = $"{Math.Sqrt(2):X2}";
+
+        Assert.Equal("1.6", response);
+    }
+    
 }
