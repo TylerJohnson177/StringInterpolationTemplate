@@ -28,44 +28,44 @@ public class StringInterpolationService : IStringInterpolationService
 
     public string Number02()
     {
-        var now = _date.Now;
-        return $"{now.Year}.{now.Month:D2}.{now.Day:D2}";
+        var date = _date.Now;
+        return $"{date.Year}.{date.Month:D2}.{date.Day:D2}";
     }
 
     public string Number03()
     {
-        var now = _date.Now;
-        return $"Day {now.Day:D2} of {now.ToString("MMMM")}, {now.Year}";
+        var date = _date.Now;
+        return $"Day {date.Day:D2} of {date.ToString("MMMM")}, {date.Year}";
     }
 
     public string Number04()
     {
-        var now = _date.Now;
-        return $"Year:{now.Year}, Month:{now.Month:D2}, Day:{now.Day:D2}";
+        var date = _date.Now;
+        return $"Year: {date.Year}, Month:{date.Month:D2}, Day:{date.Day:D2}";
     }
 
     public string Number05()
     {
-        var now = _date.Now;
-        return now.ToString("dddd").PadLeft(10);
+        var date = _date.Now;
+        return date.ToString("dddd").PadLeft(10);
     }
 
     public string Number06()
     {
-        var now = _date.Now;
-        return $"{now:t}".PadRight(10) + $"{now.ToString("dddd")}".PadRight(10);
+        var date = _date.Now;
+        return $"{date:t}".PadRight(10) + $"{date.ToString("dddd")}".PadRight(10);
     }
 
     public string Number07()
     {
-        var now = _date.Now;
-        return $"h:{now.Hour:D2}, m:{now.Month:D2}, s:{now.Second:D2}";
+        var date = _date.Now;
+        return $"h:{date.Hour:D2}, m:{date.Month:D2}, s:{date.Second:D2}";
     }
 
     public string Number08()
     {
-        var now = _date.Now;
-        return $"{now.Year}.{now.Month:D2}.{now.Day:D2}.{now.Hour:D2}.{now.Minute:D2}.{now.Second:D2}";
+        var date = _date.Now;
+        return $"{date.Year}.{date.Month:D2}.{date.Day:D2}.{date.Hour:D2}.{date.Minute:D2}.{date.Second:D2}";
     }
 
     public string Number09()
@@ -77,13 +77,13 @@ public class StringInterpolationService : IStringInterpolationService
     public string Number10()
     {
         var pi = Math.PI;
-        return String.Format($"{pi:0.000}".PadRight(10));
+        return String.Format($"{pi:0.000}".PadLeft(10));
     }
 
     public string Number11()
     {
         var now = _date.Now;
-        return $"{Math.Sqrt(2):X2}";
+        return $"{Math.Sqrt(2)}";
     }
 
     //2.2019.01.22
