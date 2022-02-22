@@ -23,14 +23,16 @@ public class StringInterpolationServiceTests
     [Fact]
     public void StringInterpolationService_Number01_Success()
     {
+        DateTime now = DateTime.Now;
         var response = _service.Number01();
-
+        
         Assert.Equal("                        January 22, 2019", response);
     }
 
     [Fact]
     public void StringInterpolationService_Number02_Success()
     {
+        DateTime now = DateTime.Now;
         var response = _service.Number02();
 
         Assert.Equal("2019.01.22", response);
@@ -39,6 +41,7 @@ public class StringInterpolationServiceTests
     [Fact]
     public void StringInterpolationService_Number03_Success()
     {
+        DateTime now = DateTime.Now;
         var response = _service.Number03();
 
         Assert.Equal("Day 22 of January, 2019", response);
@@ -47,6 +50,7 @@ public class StringInterpolationServiceTests
     [Fact]
     public void StringInterpolationService_Number04_Success()
     {
+        DateTime now = DateTime.Now;
         var response = _service.Number04();
 
         Assert.Equal("Year: 2019, Month: 01, Day: 22", response);
@@ -55,6 +59,7 @@ public class StringInterpolationServiceTests
     [Fact]
     public void StringInterpolationService_Number05_Success()
     {
+        DateTime now = DateTime.Now;
         var response = _service.Number05();
 
         Assert.Equal("   Tuesday", response);
@@ -63,6 +68,7 @@ public class StringInterpolationServiceTests
     [Fact]
     public void StringInterpolationService_Number06_Success()
     {
+        DateTime now = DateTime.Now;
         var response = _service.Number06();
 
         Assert.Equal("  11:01 PM   Tuesday", response);
@@ -71,6 +77,7 @@ public class StringInterpolationServiceTests
     [Fact]
     public void StringInterpolationService_Number07_Success()
     {
+        DateTime now = DateTime.Now;
         var response = _service.Number07();
 
         Assert.Equal("h:11, m:01, s:27", response);
@@ -79,6 +86,7 @@ public class StringInterpolationServiceTests
     [Fact]
     public void StringInterpolationService_Number08_Success()
     {
+        DateTime now = DateTime.Now;
         var response = _service.Number08();
 
         Assert.Equal("2019.01.22.11.01.27", response);
@@ -87,6 +95,7 @@ public class StringInterpolationServiceTests
     [Fact]
     public void StringInterpolationService_Number09_Success()
     {
+        var pi = Math.PI;
         var response = _service.Number09();
 
         Assert.Equal("$3.14", response);
@@ -95,6 +104,7 @@ public class StringInterpolationServiceTests
     [Fact]
     public void StringInterpolationService_Number10_Success()
     {
+        var pi = Math.PI;
         var response = _service.Number10();
 
         Assert.Equal("     3.142", response);
