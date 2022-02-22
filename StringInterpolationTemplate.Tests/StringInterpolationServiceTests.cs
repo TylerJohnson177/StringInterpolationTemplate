@@ -24,7 +24,7 @@ public class StringInterpolationServiceTests
     public void StringInterpolationService_Number01_Success()
     {
         DateTime now = DateTime.Now;
-        var response = $"{now.ToString("MMMM")} {now.Day:D2}, {now.Year}".PadRight(40);
+        var response = _service.Number01();
         
         Assert.Equal("                        January 22, 2019", response);
     }
@@ -33,7 +33,7 @@ public class StringInterpolationServiceTests
     public void StringInterpolationService_Number02_Success()
     {
         DateTime now = DateTime.Now;
-        var response = $"{now.Year}.{now.Month:D2}.{now.Day:D2}";
+        var response = _service.Number02();
 
         Assert.Equal("2019.01.22", response);
     }
@@ -42,7 +42,7 @@ public class StringInterpolationServiceTests
     public void StringInterpolationService_Number03_Success()
     {
         DateTime now = DateTime.Now;
-        var response = $"Day {now.Day:D2} of {now.ToString("MMMM")}, {now.Year}";
+        var response = _service.Number03();
 
         Assert.Equal("Day 22 of January, 2019", response);
     }
@@ -51,7 +51,7 @@ public class StringInterpolationServiceTests
     public void StringInterpolationService_Number04_Success()
     {
         DateTime now = DateTime.Now;
-        var response = $"Year:{now.Year}, Month:{now.Month:D2}, Day:{now.Day:D2}";
+        var response = _service.Number04();
 
         Assert.Equal("Year: 2019, Month: 01, Day: 22", response);
     }
@@ -60,7 +60,7 @@ public class StringInterpolationServiceTests
     public void StringInterpolationService_Number05_Success()
     {
         DateTime now = DateTime.Now;
-        var response = now.ToString("dddd").PadLeft(10);
+        var response = _service.Number05();
 
         Assert.Equal("   Tuesday", response);
     }
@@ -69,7 +69,7 @@ public class StringInterpolationServiceTests
     public void StringInterpolationService_Number06_Success()
     {
         DateTime now = DateTime.Now;
-        var response = $"{now:t}".PadRight(10) + $"{now.ToString("dddd")}".PadRight(10);
+        var response = _service.Number06();
 
         Assert.Equal("  11:01 PM   Tuesday", response);
     }
@@ -78,7 +78,7 @@ public class StringInterpolationServiceTests
     public void StringInterpolationService_Number07_Success()
     {
         DateTime now = DateTime.Now;
-        var response = $"h:{now.Hour:D2}, m:{now.Month:D2}, s:{now.Second:D2}";
+        var response = _service.Number07();
 
         Assert.Equal("h:11, m:01, s:27", response);
     }
@@ -87,7 +87,7 @@ public class StringInterpolationServiceTests
     public void StringInterpolationService_Number08_Success()
     {
         DateTime now = DateTime.Now;
-        var response = $"{now.Year}.{now.Month:D2}.{now.Day:D2}.{now.Hour:D2}.{now.Minute:D2}.{now.Second:D2}";
+        var response = _service.Number08();
 
         Assert.Equal("2019.01.22.11.01.27", response);
     }
@@ -96,7 +96,7 @@ public class StringInterpolationServiceTests
     public void StringInterpolationService_Number09_Success()
     {
         var pi = Math.PI;
-        var response = String.Format($"{pi:C}");
+        var response = _service.Number09();
 
         Assert.Equal("$3.14", response);
     }
@@ -105,7 +105,7 @@ public class StringInterpolationServiceTests
     public void StringInterpolationService_Number10_Success()
     {
         var pi = Math.PI;
-        var response = String.Format($"{pi:0.000}".PadRight(10));
+        var response = _service.Number10();
 
         Assert.Equal("     3.142", response);
     }
@@ -114,7 +114,7 @@ public class StringInterpolationServiceTests
     public void StringInterpolationService_Number11_Success()
     {
         var pi = Math.PI;
-        var response = $"{Math.Sqrt(2):X2}";
+        var response = _service.Number11();
 
         Assert.Equal("1.6", response);
     }

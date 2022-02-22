@@ -28,52 +28,62 @@ public class StringInterpolationService : IStringInterpolationService
 
     public string Number02()
     {
-        throw new NotImplementedException();
+        var now = _date.Now;
+        return $"{now.Year}.{now.Month:D2}.{now.Day:D2}";
     }
 
     public string Number03()
     {
-        throw new NotImplementedException();
+        var now = _date.Now;
+        return $"Day {now.Day:D2} of {now.ToString("MMMM")}, {now.Year}";
     }
 
     public string Number04()
     {
-        throw new NotImplementedException();
+        var now = _date.Now;
+        return $"Year:{now.Year}, Month:{now.Month:D2}, Day:{now.Day:D2}";
     }
 
     public string Number05()
     {
-        throw new NotImplementedException();
+        var now = _date.Now;
+        return now.ToString("dddd").PadLeft(10);
     }
 
     public string Number06()
     {
-        throw new NotImplementedException();
+        var now = _date.Now;
+        return $"{now:t}".PadRight(10) + $"{now.ToString("dddd")}".PadRight(10);
     }
 
     public string Number07()
     {
-        throw new NotImplementedException();
+        var now = _date.Now;
+        return $"h:{now.Hour:D2}, m:{now.Month:D2}, s:{now.Second:D2}";
     }
 
     public string Number08()
     {
-        throw new NotImplementedException();
+        var now = _date.Now;
+        return $"{now.Year}.{now.Month:D2}.{now.Day:D2}.{now.Hour:D2}.{now.Minute:D2}.{now.Second:D2}";
     }
 
     public string Number09()
     {
-        throw new NotImplementedException();
+        var pi = Math.PI;
+        return String.Format($"{pi:C}");
     }
 
     public string Number10()
     {
-        throw new NotImplementedException();
+        var pi = Math.PI;
+        return String.Format($"{pi:0.000}".PadRight(10));
     }
 
     public string Number11()
     {
-        throw new NotImplementedException();
+        var now = _date.Now;
+        return $"{Math.Sqrt(2):X2}";
     }
 
     //2.2019.01.22
