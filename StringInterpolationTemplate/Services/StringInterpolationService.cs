@@ -71,7 +71,7 @@ public class StringInterpolationService : IStringInterpolationService
     public string Number09()
     {
         var pi = Math.PI;
-        return String.Format($"{pi:C}");
+        return String.Format($"{pi:C, en-US}");
     }
 
     public string Number10()
@@ -82,7 +82,9 @@ public class StringInterpolationService : IStringInterpolationService
 
     public string Number11()
     {
-        return $"{Math.Sqrt(2):X}";
+        double sqrt = Math.Sqrt(2);
+        return sqrt.ToString("X");
+
     }
 
     //2.2019.01.22
