@@ -41,7 +41,7 @@ public class StringInterpolationService : IStringInterpolationService
     public string Number04()
     {
         var date = _date.Now;
-        return $"Year: {date.Year}, Month:{date.Month:D2}, Day:{date.Day:D2}";
+        return $"Year: {date.Year}, Month: {date.Month:D2}, Day: {date.Day:D2}";
     }
 
     public string Number05()
@@ -82,8 +82,7 @@ public class StringInterpolationService : IStringInterpolationService
 
     public string Number11()
     {
-        var now = _date.Now;
-        return $"{Math.Sqrt(2)}";
+        return $"{Math.Sqrt(2):X}";
     }
 
     //2.2019.01.22
